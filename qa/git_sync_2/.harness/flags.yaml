@@ -1,0 +1,82 @@
+featureFlags:
+  flags:
+  - flag:
+      name: a boolean
+      identifier: a_boolean
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: other_environment
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test_env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: a multivariate
+      identifier: a_multivariate
+      description: ""
+      permanent: false
+      spec:
+        type: string
+        default:
+          onVariation: option_a
+          offVariation: option_b
+        variations:
+        - identifier: option_a
+          value: a
+        - identifier: option_b
+          value: b
+      environments:
+      - identifier: other_environment
+        default:
+          onVariation: option_a
+          offVariation: option_b
+        state: "on"
+      - identifier: test_env
+        default:
+          onVariation: option_a
+          offVariation: option_b
+        state: "off"
+  - flag:
+      name: flag post second repo
+      identifier: flag_post_second_repo
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: other_environment
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test_env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  projectIdentifier: Laura_Git_Sync_MultiRepo
+  orgIdentifier: default
