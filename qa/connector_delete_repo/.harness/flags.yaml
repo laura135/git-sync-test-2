@@ -1,0 +1,25 @@
+featureFlags:
+  flags:
+  - flag:
+      name: simple bool
+      identifier: simple_bool
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  projectIdentifier: git_sync_exp_2
+  orgIdentifier: default
