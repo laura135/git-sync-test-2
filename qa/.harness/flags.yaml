@@ -21,5 +21,26 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "on"
+  - flag:
+      name: new flag for test
+      identifier: new_flag_for_test
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: test_env_laura
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
   projectIdentifier: test_project_laura_ui
   orgIdentifier: default
