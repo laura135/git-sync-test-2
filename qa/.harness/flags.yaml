@@ -1,0 +1,25 @@
+featureFlags:
+  flags:
+  - flag:
+      name: bool flag
+      identifier: bool_flag
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: test_env_laura
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  projectIdentifier: test_project_laura_ui
+  orgIdentifier: default
